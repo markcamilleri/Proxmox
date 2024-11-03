@@ -90,7 +90,7 @@ function update_script() {
       cp -r /opt/paperless/paperless.conf paperless-ngx/
       cp -r paperless-ngx/* /opt/paperless/
       cd /opt/paperless
-      pip3 install -r requirements.txt
+      pip3 install -r requirements.txt --break-system-packages
       #pip install -r requirements.txt &>/dev/null
       cd /opt/paperless/src
       /usr/bin/python3 manage.py migrate &>/dev/null
